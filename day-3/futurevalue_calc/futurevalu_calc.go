@@ -28,8 +28,8 @@ func main() {
 	fmt.Println("Real value of investment:", futureRealValue)
 }
 
-func investmentReturn(investment, investmentRate, years float64) (float64, float64) {
-	ir := investment * math.Pow((1+investmentRate/100), years)
-	fr := ir / math.Pow(1+inflationRate/100, years)
+func investmentReturn(investment, investmentRate, years float64) (ir float64, fr float64) {
+	ir = investment * math.Pow((1+investmentRate/100), years)
+	fr = ir / math.Pow(1+inflationRate/100, years)
 	return ir, fr
 }
